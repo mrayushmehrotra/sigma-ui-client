@@ -1,11 +1,11 @@
 import "./globals.css";
 import { Metadata, Viewport } from "next";
-import { Analytics } from "@vercel/analytics/next";
-import { Providers } from "./providers";
+
+// import { Providers } from "./providers";
 // import manifest from "@/config/routes.json";
 import { siteConfig } from "@/config/site";
-// import { Navbar } from "@/components/navbar";
-// import { Footer } from "@/components/footer";
+import { Nav } from "@/components/main/Navbar";
+import Footer from "@/components/main/Footer";
 import { cn } from "@/utils/cn";
 
 export const metadata: Metadata = {
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
   ],
   creator: "sigmaui-inc",
   alternates: {
-    canonical: "https://heroui.com",
+    canonical: "https://sigma.com",
     types: {
       "application/rss+xml": [
-        { url: "https://heroui.com/feed.xml", title: "HeroUI RSS Feed" },
+        { url: "https://sigma.com/feed.xml", title: "RSS Feed" },
       ],
     },
   },
@@ -75,18 +75,16 @@ export default function RootLayout({
     <html suppressHydrationWarning dir="ltr" lang="en">
       <head />
       <body className={cn("min-h-screen bg-background font-sans antialiased")}>
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col" id="app-container">
-            {/* <ProBanner /> */}
-            {/* <Navbar */}
-            {/*   mobileRoutes={manifest.mobileRoutes} */}
-            {/*   routes={manifest.routes} */}
-            {/* /> */}
-            {children}
-            <Analytics mode="production" />
-            {/* <Footer /> */}
-          </div>
-        </Providers>
+        <div className="relative flex flex-col" id="app-container">
+          {/* <ProBanner /> */}
+          <Nav />
+          {/*   mobileRoutes={manifest.mobileRoutes} */}
+          {/*   routes={manifest.routes} */}
+          {/* /> */}
+          {children}
+
+          <Footer />
+        </div>
       </body>
     </html>
   );

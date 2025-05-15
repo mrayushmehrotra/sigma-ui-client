@@ -4,6 +4,7 @@ import * as React from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { ThemeProviderProps } from "next-themes";
 import { atom, RecoilRoot } from "recoil";
+
 export interface ProvidersProps {
   children: React.ReactNode;
   themeProps?: ThemeProviderProps;
@@ -17,7 +18,9 @@ const CurrentTheme = atom({
 export function Providers({ children, themeProps }: ProvidersProps) {
   return (
     <RecoilRoot>
-      <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
+      <NextThemesProvider {...themeProps} defaultTheme="dark">
+        {children}
+      </NextThemesProvider>
     </RecoilRoot>
   );
 }
