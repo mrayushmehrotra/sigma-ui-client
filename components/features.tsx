@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Typer, TypewriterEffectSmoothDemo } from "./Typer";
+import { Typer } from "./Typer";
 
 const features = [
   {
@@ -86,4 +86,3 @@ export function Features() {
     </div>
   );
 }
-
