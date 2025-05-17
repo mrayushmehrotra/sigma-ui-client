@@ -5,8 +5,6 @@ import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { CodeBlock } from "./code-block";
-import { Typer_2 } from "./Typer";
-import { Typer_terminal } from "./Typer";
 import Link from "next/link";
 
 export function Hero() {
@@ -103,11 +101,10 @@ export function Hero() {
             A Component Library build on top of shadcn
           </p>
           <CodeBlock
+            language="bash"
             className=" pointer-events-none overflow-hidden "
-            language={<Typer_terminal />}
           >
-            <Typer_2 />
-            shadcn@latest init
+            npx shadcn@latest init
           </CodeBlock>
           <div className="mt-10 flex flex-col   ">
             <div className="flex items-center justify-center gap-x-6">
