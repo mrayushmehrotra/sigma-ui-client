@@ -1,7 +1,5 @@
 "use client";
 import { DocLayout } from "@/components/doc-layout";
-import { CodeBlock } from "@/components/code-block";
-import { ChevronRight } from "lucide-react";
 import Breadcrumb from "@/components/ui/breadcumber";
 import CodePreviewScreen from "@/components/ui/CodePreviewScreen";
 

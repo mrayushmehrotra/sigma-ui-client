@@ -1,8 +1,7 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useRouter } from "next/navigation"
-import { Calculator, Calendar, CreditCard, Settings, Smile, User } from "lucide-react"
+import * as React from "react";
+import { useRouter } from "next/navigation";
 
 import {
   CommandDialog,
@@ -13,27 +12,27 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/components/ui/command"
+} from "@/components/ui/command";
 
 export function SearchCommand() {
-  const [open, setOpen] = React.useState(false)
-  const router = useRouter()
+  const [open, setOpen] = React.useState(false);
+  const router = useRouter();
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault()
-        setOpen((open) => !open)
+        e.preventDefault();
+        setOpen((open) => !open);
       }
-    }
-    document.addEventListener("keydown", down)
-    return () => document.removeEventListener("keydown", down)
-  }, [])
+    };
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, []);
 
   const runCommand = React.useCallback((command: () => unknown) => {
-    setOpen(false)
-    command()
-  }, [])
+    setOpen(false);
+    command();
+  }, []);
 
   return (
     <>
@@ -52,31 +51,55 @@ export function SearchCommand() {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Documentation">
-            <CommandItem onSelect={() => runCommand(() => router.push("/docs/getting-started"))}>
+            <CommandItem
+              onSelect={() =>
+                runCommand(() => router.push("/docs/getting-started"))
+              }
+            >
               Getting Started
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => router.push("/docs/app-directory"))}>
+            <CommandItem
+              onSelect={() =>
+                runCommand(() => router.push("/docs/app-directory"))
+              }
+            >
               App Router
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => router.push("/docs/pages-directory"))}>
+            <CommandItem
+              onSelect={() =>
+                runCommand(() => router.push("/docs/pages-directory"))
+              }
+            >
               Pages Router
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => router.push("/docs/api-reference"))}>
+            <CommandItem
+              onSelect={() =>
+                runCommand(() => router.push("/docs/api-reference"))
+              }
+            >
               API Reference
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading="Learn">
-            <CommandItem onSelect={() => runCommand(() => router.push("/learn/foundations"))}>
+            <CommandItem
+              onSelect={() =>
+                runCommand(() => router.push("/learn/foundations"))
+              }
+            >
               Foundations
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => router.push("/learn/dashboard"))}>
+            <CommandItem
+              onSelect={() => runCommand(() => router.push("/learn/dashboard"))}
+            >
               Dashboard App
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading="Settings">
-            <CommandItem onSelect={() => runCommand(() => router.push("/settings"))}>
+            <CommandItem
+              onSelect={() => runCommand(() => router.push("/settings"))}
+            >
               Settings
               <CommandShortcut>⌘S</CommandShortcut>
             </CommandItem>
@@ -84,5 +107,6 @@ export function SearchCommand() {
         </CommandList>
       </CommandDialog>
     </>
-  )
+  );
 }
+

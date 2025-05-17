@@ -103,7 +103,7 @@ export function Hero() {
             A Component Library build on top of shadcn
           </p>
           <CodeBlock
-            className="cursor-not-allowed overflow-hidden "
+            className=" pointer-events-none overflow-hidden "
             language={<Typer_terminal />}
           >
             <Typer_2 />

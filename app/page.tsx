@@ -32,7 +32,7 @@ export default function Home() {
 
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <div className="rounded-2xl border p-6 bg-background shadow-sm">
+                <div className="rounded-2xl shadow-lg border p-6 bg-background shadow-sm">
                   <h3 className="text-lg font-semibold">Foundations</h3>
                   <p className="mt-2 text-muted-foreground">
                     Our Prime Goal is to create basic Components which can be
