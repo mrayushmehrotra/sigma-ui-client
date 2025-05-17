@@ -4,6 +4,10 @@ import React, { useEffect, useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { CodeBlock } from "./code-block";
+import { Typer_2 } from "./Typer";
+import { Typer_terminal } from "./Typer";
+import Link from "next/link";
 
 export function Hero() {
   const [count, setCount] = useState(0);
@@ -11,8 +15,8 @@ export function Hero() {
     "Production grade React applications",
     "Full-stack web applications",
     "Server-side rendered apps",
-    "Static websites",
-    "Enterprise applications",
+    "Static webstes",
+    "Enterprise pplications",
     "Hybrid applications",
   ];
 
@@ -97,30 +101,27 @@ export function Hero() {
           </h1>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
             A Component Library build on top of shadcn
-            <span className="relative bg-red-400  inline-flex overflow-hidden">
-              <span
-                className="absolute transition-transform duration-1000 ease-in-out"
-                style={{
-                  transform: `translateY(${-100 * count}%)`,
-                }}
-              >
-                {phrases.map((phrase, i) => (
-                  <span key={i} className="block h-8">
-                    {phrase}
-                  </span>
-                ))}
-              </span>
-            </span>
           </p>
+          <CodeBlock
+            className="cursor-not-allowed overflow-hidden "
+            language={<Typer_terminal />}
+          >
+            <Typer_2 />
+            shadcn@latest init
+          </CodeBlock>
           <div className="mt-10 flex flex-col   ">
             <div className="flex items-center justify-center gap-x-6">
-              <Button size="lg" className="gap-1">
-                Get Started
-                <ChevronRight className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="lg">
-                Let&apos;s Build
-              </Button>{" "}
+              <Link href="/docs/installation">
+                <Button size="lg" className="gap-1">
+                  Get Started
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/docs">
+                <Button variant="outline" size="lg">
+                  Let&apos;s Build
+                </Button>{" "}
+              </Link>
             </div>
             <div className="flex mt-4 items-center justify-center lg:gap-4">
               <Image
@@ -144,4 +145,3 @@ export function Hero() {
     </div>
   );
 }
-

@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Check, Copy } from "lucide-react"
+import * as React from "react";
+import { Check, Copy } from "lucide-react";
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 interface CodeBlockProps extends React.HTMLAttributes<HTMLPreElement> {
-  language?: string
+  language?: string;
 }
 
 export function CodeBlock({
@@ -16,14 +16,14 @@ export function CodeBlock({
   className,
   ...props
 }: CodeBlockProps) {
-  const [copied, setCopied] = React.useState(false)
+  const [copied, setCopied] = React.useState(false);
 
   const onCopy = () => {
-    const text = React.Children.toArray(children)[0] as string
-    navigator.clipboard.writeText(text)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
+    const text = React.Children.toArray(children)[0] as string;
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <div className="relative my-4 overflow-hidden rounded-lg border">
@@ -47,12 +47,13 @@ export function CodeBlock({
       <pre
         className={cn(
           "overflow-x-auto bg-black py-4 text-sm text-white dark:bg-zinc-950",
-          className
+          className,
         )}
         {...props}
       >
         <code className="px-4">{children}</code>
       </pre>
     </div>
-  )
+  );
 }
+

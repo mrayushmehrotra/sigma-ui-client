@@ -10,7 +10,7 @@ export function MainNav() {
   const pathname = usePathname();
 
   return (
-    <div className="ml-8 flex">
+    <div className="ml-8 flex items-center  ">
       <Link href="/" className="mr-6 flex items-center space-x-2">
         <svg
           height="20"
