@@ -1,3 +1,4 @@
+"use client";
 import { DocLayout } from "@/components/doc-layout";
 import { CodeBlock } from "@/components/code-block";
 
@@ -106,6 +107,26 @@ export default function InstallationPage() {
   }
 }`}
           </CodeBlock>
+          <p className="leading-7">
+            then install{" "}
+            <code
+              onClick={() =>
+                (window.location.href =
+                  "https://ui.shadcn.com/docs/installation")
+              }
+              className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm cursor-pointer "
+            >
+              shadcn
+            </code>{" "}
+            for only shadcn based components
+          </p>
+          <CodeBlock language="json">
+            {` npm i shadcn@latest
+`}
+          </CodeBlock>
+          <p className="leading-7">
+            configure your shadcn, and Yeah you are done :)
+          </p>
         </div>
 
         <div className="space-y-4">
@@ -133,4 +154,3 @@ export default function InstallationPage() {
     </DocLayout>
   );
 }
-
