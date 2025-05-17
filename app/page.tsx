@@ -70,9 +70,9 @@ export default function Home() {
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Trusted by the world's most ambitious teams
-            </h2>
+            <h6 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Trusted by the world's most ambitious teams <sup>fake</sup>
+            </h6>
           </div>
           <div className="mx-auto mt-16 max-w-screen-xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
