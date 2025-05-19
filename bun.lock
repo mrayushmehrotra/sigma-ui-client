@@ -37,6 +37,7 @@
         "@types/node": "20.6.2",
         "@types/react": "18.2.22",
         "@types/react-dom": "18.2.7",
+        "@types/react-syntax-highlighter": "^15.5.13",
         "@uidotdev/usehooks": "^2.4.1",
         "autoprefixer": "10.4.15",
         "canvas-confetti": "^1.9.3",
@@ -288,6 +289,8 @@
     "@types/react": ["@types/react@18.2.22", "", { "dependencies": { "@types/prop-types": "*", "@types/scheduler": "*", "csstype": "^3.0.2" } }, "sha512-60fLTOLqzarLED2O3UQImc/lsNRgG0jE/a1mPW9KjMemY0LMITWEsbS4VvZ4p6rorEHd5YKxxmMKSDK505GHpA=="],
 
     "@types/react-dom": ["@types/react-dom@18.2.7", "", { "dependencies": { "@types/react": "*" } }, "sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA=="],
+
+    "@types/react-syntax-highlighter": ["@types/react-syntax-highlighter@15.5.13", "", { "dependencies": { "@types/react": "*" } }, "sha512-uLGJ87j6Sz8UaBAooU0T6lWJ0dBmjZgN1PZTrj05TNql2/XpC6+4HhMT5syIdFUUt+FASfCeLLv4kBygNU+8qA=="],
 
     "@types/scheduler": ["@types/scheduler@0.23.0", "", {}, "sha512-YIoDCTH3Af6XM5VuwGG/QL/CJqga1Zm3NkU3HZ4ZHK2fRMPYP1VczsTUqtsf43PH/iJNVlPHAo2oWX7BSdB2Hw=="],
 
