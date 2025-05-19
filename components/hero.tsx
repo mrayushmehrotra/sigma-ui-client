@@ -123,7 +123,7 @@ export function Hero() {
             <div className="flex mt-4 items-center justify-center lg:gap-4">
               <Image
                 src="/react.svg"
-                className="hover:brightness-125"
+                className="hover:brightness-125 transition-all animate-spin duration-[2000ms]"
                 alt="img"
                 height={60}
                 width={60}
