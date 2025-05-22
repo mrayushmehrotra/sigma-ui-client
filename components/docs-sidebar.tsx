@@ -38,12 +38,12 @@ const docsConfig = {
           href: "/docs/components/button",
         },
         {
-          title: "Data Fetching",
-          href: "/docs/app-router/data-fetching",
+          title: "Mouse",
+          href: "/docs/components/mouse",
         },
         {
-          title: "Rendering",
-          href: "/docs/app-router/rendering",
+          title: "Navbar",
+          href: "/docs/components/navbar",
         },
         {
           title: "Caching",
@@ -93,4 +93,3 @@ export function DocsSidebar({ className }: DocsSidebarProps) {
     </div>
   );
 }
-
