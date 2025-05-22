@@ -42,6 +42,11 @@ const docsConfig = {
           href: "/docs/components/mouse",
         },
         {
+          title: "Flashy Mouse",
+          href: "/docs/components/flashy-mouse",
+        },
+
+        {
           title: "Navbar",
           href: "/docs/components/navbar",
         },
