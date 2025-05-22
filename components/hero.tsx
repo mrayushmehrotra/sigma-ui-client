@@ -100,12 +100,17 @@ export function Hero() {
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
             A Component Library build on top of shadcn
           </p>
-          <CodeBlock
-            language="bash"
-            className=" pointer-events-none overflow-hidden "
+          <Link
+            onClick={() => navigator.clipboard.writeText("")}
+            href="/docs/installation"
           >
-            npx shadcn@latest init
-          </CodeBlock>
+            <CodeBlock
+              language="bash"
+              className=" pointer-events-none overflow-hidden "
+            >
+              npx shadcn@latest init
+            </CodeBlock>
+          </Link>
           <div className="mt-10 flex flex-col   ">
             <div className="flex items-center justify-center gap-x-6">
               <Link href="/docs/installation">
