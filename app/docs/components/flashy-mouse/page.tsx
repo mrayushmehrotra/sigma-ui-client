@@ -1,5 +1,5 @@
 "use client";
-import { CodeBlock } from "@/components/code-block";
+
 import { DocLayout } from "@/components/doc-layout";
 import Breadcrumb from "@/components/ui/breadcumber";
 import CodePreview from "@/components/ui/CodePreview";
